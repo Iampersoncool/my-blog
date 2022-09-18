@@ -23,5 +23,3 @@ It only took me a few days to make a fully functioning blog with HUGO.
   sayStuff()
 {{< /highlight >}}
 
-
-
