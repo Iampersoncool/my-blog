@@ -6,6 +6,9 @@ format = 'Monday, Jan 2, 2006 3:04 PM'
 # [permalinks]
   # blogs = "/:filename/"
 
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
 [markup.highlight]
   codeFences = true
   lineNoStart = 1
@@ -14,7 +17,4 @@ format = 'Monday, Jan 2, 2006 3:04 PM'
   lineNumbersInTable = true
   tabWidth = 2
   noClasses = false
-  pygmentsUseClasses = true
-  pygmentsCodefences = true
-
 
