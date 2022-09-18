@@ -9,10 +9,12 @@ format = 'Monday, Jan 2, 2006 3:04 PM'
 [markup.highlight]
   codeFences = true
   lineNoStart = 1
+  hl_Lines = ""
   lineNos = true
   lineNumbersInTable = true
   tabWidth = 2
   noClasses = false
-
+  pygmentsUseClasses = true
+  pygmentsCodefences = true
 
 
