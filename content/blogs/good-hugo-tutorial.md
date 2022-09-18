@@ -7,8 +7,7 @@ description: "hugo tutorial"
 
 # Very good hugo tutorial
 
-{{< youtube 0RKpf3rK57I >}}
-<br />
+{{< youtube id="w7Ft2ymGmfc" >}}
 
 ### 👏👏👏👏👏👏👏👏👏👏👏
 
