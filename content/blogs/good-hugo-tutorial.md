@@ -7,11 +7,6 @@ description: "hugo tutorial"
 
 # Very good hugo tutorial
 
-{{< vimeo id="146022717" class="my-vimeo-wrapper-class" title="My vimeo video" >}}
-{{< youtube w7Ft2ymGmfc >}}
-
-
+{{< youtube 0RKpf3rK57I >}}
 
 ### 👏👏👏👏👏👏👏👏👏👏👏
-
-
