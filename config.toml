@@ -11,8 +11,9 @@ pygmentsCodefences = true
 
 [markup.highlight]
   codeFences = true
-  lineNoStart = 1
+  guessSyntax = false
   hl_Lines = ""
+  lineNoStart = 1
   lineNos = true
   lineNumbersInTable = true
   tabWidth = 2
