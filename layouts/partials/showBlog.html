@@ -1,0 +1,8 @@
+<article class="card p-3 d-flex flex-column align-items-center mt-3">
+  <h1>{{ .Title }}</h1>
+  <p>{{ dateFormat "January 2, 2006 3:04 PM" .Date.Local }}</p>
+  <p>{{ .Description | truncate 200 }}</p>
+  <a href="{{ .RelPermalink }}" class="btn btn-primary" style="width: 20%;">
+    read more
+  </a>
+</article>
