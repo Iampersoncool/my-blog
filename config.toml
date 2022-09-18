@@ -1,16 +1,9 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'My Blog'
-format = 'Monday, Jan 2, 2006 3:04 PM'
 
 # [permalinks]
   # blogs = "/:filename/"
-
-[markup]
-  defaultMarkdownHandler = "goldmark"
-
-[markup.goldmark.renderer]
-  unsafe = true
 
 pygmentsUseClasses = true
 pygmentsCodefences = true
