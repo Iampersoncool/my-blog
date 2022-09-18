@@ -7,6 +7,4 @@ description: "my second blog"
 
 # My second blog
 
-{{< tweet user="SanDiegoZoo" id="1453110110599868418" >}}
-
 # 👍👍
