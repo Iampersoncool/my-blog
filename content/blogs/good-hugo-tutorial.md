@@ -1,7 +1,7 @@
 ---
 title: "Good Hugo Tutorial"
 date: 2022-09-16T19:55:10-07:00
-draft: true
+draft: false
 description: "hugo tutorial"
 ---
 
