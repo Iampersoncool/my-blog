@@ -13,7 +13,7 @@ It only took me a few days to make a fully functioning blog with HUGO.
 
 ### I even have code support with syntax highlighting !
 
-{{< highlight JavaScript >}}
+{{< highlight JavaScript "hl_lines = 1"  >}}
   // code support
 
   function sayStuff() {
