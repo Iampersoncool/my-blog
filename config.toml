@@ -19,4 +19,4 @@ pygmentsCodefences = true
   noClasses = false
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS"]
