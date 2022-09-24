@@ -17,3 +17,6 @@ pygmentsCodefences = true
   lineNumbersInTable = true
   tabWidth = 2
   noClasses = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

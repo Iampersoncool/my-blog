@@ -1,0 +1,10 @@
+{
+    "items" : [
+        {{ range where $.Paginator.Pages "Section" "blogs" }}
+        {
+            "url": "{{ .RelPermalink }}",
+            "description": "{{ .Description }}"
+        }
+        {{ end }}
+    ]
+}
