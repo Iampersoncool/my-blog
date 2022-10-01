@@ -1,0 +1,13 @@
+<div class='hljs code'>
+  <div class="line-numbers">
+    {{ $split := split .Inner "\n" }}
+    {{ $length := len $split }}
+  
+    {{ range seq $length }}
+      <div>{{ . }}</div>
+    {{ end }}
+  </div>
+
+  <pre><code class='language-{{ .Get "language" }} hljs-code'>{{ .Inner }}</code></pre>
+</div>
+

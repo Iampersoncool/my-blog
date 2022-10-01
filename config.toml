@@ -5,18 +5,5 @@ title = 'My Blog'
 # [permalinks]
   # blogs = "/:filename/"
 
-pygmentsUseClasses = true
-pygmentsCodefences = true
-
-[markup.highlight]
-  codeFences = true
-  guessSyntax = false
-  hl_Lines = ""
-  lineNoStart = 1
-  lineNos = true
-  lineNumbersInTable = true
-  tabWidth = 2
-  noClasses = false
-
 [outputs]
   home = ["HTML", "RSS"]

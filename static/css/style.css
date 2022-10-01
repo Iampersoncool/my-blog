@@ -1,5 +1,20 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.code {
+  display: flex;
+  text-align: left !important;
+  max-width: 30rem !important;
+  margin: 0 auto;
+}
+
+.line-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.04rem;
+  font-size: 0.85rem;
+  margin-left: 0.6rem;
+}
+
+.hljs-code {
+  padding-top: 0 !important;
+  padding-bottoM: 0 !important;
+  margin: 0 !important;
 }

@@ -13,13 +13,33 @@ It only took me a few days to make a fully functioning blog with HUGO.
 
 ### I even have code support with syntax highlighting !
 
-{{< highlight JavaScript "hl_lines = 1"  >}}
-  // code support
-
-  function sayStuff() {
-    console.log('hello world')
+{{< HighlightJS language="javascript" >}}const articles = [
+  {
+    name: 'cool',
+    description: 'nice'
+  },
+  {
+    name: 'cool 2',
+    description: 'nice 2'
+  },
+  {
+    name: 'cool 3',
+    description: 'nice 3'
+  },
+  {
+    name: 'cool 4',
+    description: 'nice 4'
+  },
+  {
+    name: 'cool 5',
+    description: 'nice 5'
+  },
+  {
+    name: 'cool 6',
+    description: 'nice 6'
   }
+]
 
-  sayStuff()
-{{< /highlight >}}
+articles.forEach(console.log){{< /HighlightJS >}}
+
 
