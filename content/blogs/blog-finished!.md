@@ -42,4 +42,26 @@ It only took me a few days to make a fully functioning blog with HUGO.
 
 articles.forEach(console.log){{< /HighlightJS >}}
 
+{{< HighlightJS language="css" >}}.code {
+  display: flex;
+  text-align: left !important;
+  max-width: 30rem !important;
+  margin: 0 auto;
+}
+
+.line-numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.04rem;
+  font-size: 0.85rem;
+  margin-left: 0.6rem;
+}
+
+.hljs-code {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+}{{< /HighlightJS >}}
+
 

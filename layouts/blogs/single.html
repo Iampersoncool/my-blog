@@ -26,7 +26,7 @@
       <p class="display-4 fw-bold">{{ .Title }}</p>
       <p style="font-size: 1.2rem;">{{ dateFormat "January 2, 2006 3:04 PM" .Date }}</p>
       <p style="font-size: 1.5rem;">{{ .Description }}</p>
-      <hr style="width: 100vw;">
+      <hr style="width: calc(100vw - 2rem);">
     </header>
     <article class="text-center">
       {{ .Content }}
