@@ -1,0 +1,13 @@
+.hidden {
+  display: none !important;
+}
+
+input {
+  outline: none;
+}
+
+.searchInput {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
