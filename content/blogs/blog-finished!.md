@@ -64,7 +64,7 @@ articles.forEach(console.log){{< /HighlightJS >}}
   margin: 0 !important;
 }{{< /HighlightJS >}}
 
-{{< HighlightJS language="javascript" >}}async function search(value) {
+{{< HighlightJS language="javascript" startFrom="10" >}}async function search(value) {
   const documents = await getDocuments()
 
   documents.forEach((document, i) => {
