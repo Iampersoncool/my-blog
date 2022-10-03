@@ -6,4 +6,4 @@ title = 'My Blog'
   # blogs = "/:filename/"
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "JSON", "RSS"]
