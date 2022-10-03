@@ -64,4 +64,15 @@ articles.forEach(console.log){{< /HighlightJS >}}
   margin: 0 !important;
 }{{< /HighlightJS >}}
 
+{{< HighlightJS language="javascript" >}}async function search(value) {
+  const documents = await getDocuments()
 
+  documents.forEach((document, i) => {
+    const isVisible =
+      document.Title.toLowerCase().includes(value.trim()) ||
+      document.Description.toLowerCase().includes(value.trim())
+
+    blogs[i].classList.toggle('hidden', !isVisible)
+  })
+
+}{{</ HighlightJS >}}
