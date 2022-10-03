@@ -6,14 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ .Title }}</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.0.2/lunr.js" defer></script>
+  <script src="/js/search.js" defer></script>
+  <style>
+    .hidden {
+      display: none !important;
+    }
+
+    input {
+      outline: none;
+    }
+
+    .searchInput {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+  </style>
 </head>
 <body>
-  <div class="mx-auto" style="width: 40rem;">
+  <input type="search" placeholder="search" class="searchInput p-1 m-2">
+
+  <div class="mx-auto blogs" style="width: 40rem;">
     {{ range where .Paginator.Pages "Section" "blogs" }}
       {{ partial "showBlog.html" . }}
     {{ end }}
   </div>
-
 </body>
 </html>

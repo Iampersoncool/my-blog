@@ -1,0 +1,8 @@
+{{- $result := slice -}}
+
+{{- range where .Paginator.Pages "Section" "blogs" -}}
+    {{- $data := dict "Title" .Title "Date" .Date "Description" .Description "Id" .File.UniqueID -}}
+    {{- $result = $result | append $data -}}
+{{- end -}}
+
+{{- jsonify $result -}}
