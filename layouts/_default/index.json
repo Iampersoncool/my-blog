@@ -1,8 +1,6 @@
-{{- $result := slice -}}
-
-{{- range where .Paginator.Pages "Section" "blogs" -}}
-    {{- $data := dict "Title" .Title "Date" .Date "Description" .Description "Id" .File.UniqueID -}}
-    {{- $result = $result | append $data -}}
+{{- $.Scratch.Add "index" slice -}}
+{{- range .Site.RegularPages -}}
+    {{- $.Scratch.Add "index" (dict "Title" .Title "Description" .Description) -}}
 {{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}
 
-{{- jsonify $result -}}
