@@ -14,3 +14,7 @@
 .hljs-ln-n {
   margin-right: 0.4rem;
 }
+
+.hljs-ln-numbers {
+  text-align: center !important;
+}

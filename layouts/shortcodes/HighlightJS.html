@@ -1,4 +1,4 @@
 <div class='hljs code' style="margin-bottom: 1rem;">
-  <pre><code class='language-{{ .Get "language" }} hljs-code' data-ln-start-from='{{ .Get "startFrom" }}'>{{ .Inner }}</code></pre>
+  <pre><code class='language-{{ .Get "language" }} hljs-code' data-ln-start-from='{{ .Get "startFrom" }}'>{{ trim .Inner "\n" }}</code></pre>
 </div>
 
