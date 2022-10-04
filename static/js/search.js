@@ -23,7 +23,6 @@ async function search(value) {
     const isVisible =
       result.Title.toLowerCase().includes(value.trim()) ||
       result.Description.toLowerCase().includes(value.trim())
-
     blogs[i].classList.toggle('hidden', !isVisible)
   })
 }
@@ -31,4 +30,9 @@ async function search(value) {
 searchInput.addEventListener('input', (e) => {
   const value = e.target.value.toLowerCase()
   search(value)
+})
+
+document.addEventListener('keyup', (e) => {
+  if (e.key === 'Escape') searchInput.blur()
+  if (e.key === '/') searchInput.focus()
 })
