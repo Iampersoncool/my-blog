@@ -1,8 +1,6 @@
 .code {
-  display: flex;
   text-align: left !important;
   max-width: 30rem !important;
-  margin: 0 auto;
 }
 
 .hljs-code {
