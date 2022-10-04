@@ -12,7 +12,7 @@ Directory structure:
 {{< HighlightJS language="plaintext" startFrom="8" lineNumbers="f" >}}
 .
 ├── layouts/
-│   └── default/
+│   └── _default/
 │       └── index.json
 └── static/
     └── js/
