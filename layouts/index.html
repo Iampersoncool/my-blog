@@ -10,7 +10,7 @@
   <script src="/js/search.js" defer></script>
 </head>
 <body>
-  <input type="search" placeholder="search" class="searchInput p-1 m-2">
+  <input type="search" placeholder="search(/)" class="searchInput p-1 m-2">
 
   <div class="mx-auto blogs" style="width: 40rem;">
     {{ range where .Paginator.Pages "Section" "blogs" }}
