@@ -1,0 +1,26 @@
+{
+  "name": "my-blog",
+  "version": "1.0.0",
+  "description": "this is my blog built using the HUGO static site generator.",
+  "scripts": {
+    "build": "hugo && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iampersoncool/my-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iampersoncool/my-blog/issues"
+  },
+  "homepage": "https://github.com/Iampersoncool/my-blog#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "glob": "^8.0.3"
+  }
+}

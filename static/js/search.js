@@ -8,9 +8,7 @@ async function getDocuments() {
     const response = await fetch('/index.json')
     const data = await response.json()
 
-    searchResults = data.map(d => {
-      return { Description: d.Description, Title: d.Title}
-    })
+    searchResults = data.map(d => ({ Description: d.Description, Title: d.Title}))
   } catch (e) {
     console.log(e)
   }
