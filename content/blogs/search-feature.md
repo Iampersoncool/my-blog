@@ -86,18 +86,20 @@ Lastly, we can listen for the input
 and use the search function, passing
 in the value as a paramater.
 
+{{< HighlightJS language="javascript" startFrom="28" >}}
+searchInput.addEventListener('input', (e) => {
+  const value = e.target.value.toLowerCase()
+  search(value)
+})
+{{</ HighlightJS >}}
+
 If you want to do extra, you can listen
 for a '/' key press, which will focus
 on the search input, and also listen to
 the 'Escape' key, which will stop focusing
 on the search input.
 
-{{< HighlightJS language="javascript" startFrom="28" >}}
-searchInput.addEventListener('input', (e) => {
-  const value = e.target.value.toLowerCase()
-  search(value)
-})
-
+{{< HighlightJS language="javascript" startFrom="32" >}}
 //extra
 document.addEventListener('keyup', (e) => {
   if (e.key === 'Escape') searchInput.blur()
