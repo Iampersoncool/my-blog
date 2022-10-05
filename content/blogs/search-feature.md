@@ -6,7 +6,7 @@ code: true
 description: "How I made a search feature for my website"
 ---
 
-## Today I wanted to make a search feature for my website.
+### Today I wanted to make a search feature for my website.
 
 Directory structure:
 {{< HighlightJS language="plaintext" startFrom="8" lineNumbers="f" >}}
