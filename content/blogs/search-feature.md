@@ -14,9 +14,10 @@ Directory structure:
 ├── layouts/
 │   └── _default/
 │       └── index.json
-└── static/
-    └── js/
-        └── search.js
+├── static/
+│   └── js/
+│       └── search.js
+└── config.toml
 {{</ HighlightJS >}}
 
 Change the output of home(index page) and add json to it
