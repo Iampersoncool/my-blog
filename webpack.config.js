@@ -6,6 +6,6 @@ module.exports = {
   entry: glob.sync('./static/js/*.js'),
   output: {
     path: path.join(__dirname, 'static/dist'),
-    filename: '[name].[hash].js',
+    filename: '[name].[chunkhash].js',
   },
 };
