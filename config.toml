@@ -1,9 +1,13 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'My Blog'
+enableGitInfo = true
 
 # [permalinks]
   # blogs = "/:filename/"
 
 [outputs]
   home = ["HTML", "JSON", "RSS"]
+
+[frontmatter]
+  lastmod = [':git', ':fileModTime']
