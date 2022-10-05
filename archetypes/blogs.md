@@ -4,6 +4,5 @@ date: {{ .Date }}
 draft: true
 code: false
 description: ""
-lastmod: ""
 ---
 

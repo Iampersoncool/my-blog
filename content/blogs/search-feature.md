@@ -3,7 +3,6 @@ title: "Search Feature"
 date: 2022-10-04T12:51:06-07:00
 draft: false
 code: true
-lastmod: ""
 description: "How I made a search feature for my website"
 ---
 
