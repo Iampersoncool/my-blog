@@ -27,7 +27,7 @@ so we can fetch the json
   home = ["HTML", "JSON", "RSS"]
 {{</ HighlightJS >}}
 
-Now we can use scratch to programmatically make the json.
+programmatically making the json:
 
 {{< HighlightJS language="json" >}}
 
@@ -39,21 +39,20 @@ Now we can use scratch to programmatically make the json.
 
 {{</ HighlightJS >}}
 
-In search.js we can do a simple fetch, and map it to a new array.
-Then, we can run a loop whenever the user inputs something and check
-if it includes a value from the title, or the description.
+### Now it is time to write some code👍
 
-We can also listen for an / press on key up to focus on the input,
-and stop focusing on it when we press escape.
-
+Let's grab the search input and get all the blogs on the page:
 {{< HighlightJS language="javascript" >}}
-
 const searchInput = document.querySelector('.searchInput')
 const blogs = document.querySelectorAll('.blog')
+{{</ HighlightJS >}}
 
+Then create a function to fetch the json and 
+store the results in a variable like this:
+
+{{< HighlightJS language="javascript" startFrom="4" >}}
 let searchResults
 
-//get search results
 async function getDocuments() {
   try {
     const response = await fetch('/index.json')
@@ -66,9 +65,13 @@ async function getDocuments() {
 }
 
 getDocuments()
+{{</ HighlightJS >}}
 
-//search and check if the value includes 
-//a value from the title, or the description.
+After that we can create a search function
+that checks if the function argument named value matches the
+title or description:
+
+{{< HighlightJS language="javascript" startFrom="19" >}}
 async function search(value) {
   searchResults?.forEach((result, i) => {
     const isVisible =
@@ -77,19 +80,29 @@ async function search(value) {
     blogs[i].classList.toggle('hidden', !isVisible)
   })
 }
+{{</ HighlightJS >}}
 
-//listen for search input and run the search function
+Lastly, we can listen for the input
+and use the search function, passing
+in the value as a paramater.
+
+If you want to do extra, you can listen
+for a '/' key press, which will focus
+on the search input, and also listen to
+the 'Escape' key, which will stop focusing
+on the search input.
+
+{{< HighlightJS language="javascript" startFrom="28" >}}
 searchInput.addEventListener('input', (e) => {
   const value = e.target.value.toLowerCase()
   search(value)
 })
 
-//focus and stop focus on keyup
+//extra
 document.addEventListener('keyup', (e) => {
   if (e.key === 'Escape') searchInput.blur()
   if (e.key === '/') searchInput.focus()
 })
-
 {{</ HighlightJS >}}
 
 Now you should have a working search feature on your website!
