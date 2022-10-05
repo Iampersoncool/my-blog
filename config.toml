@@ -10,4 +10,4 @@ enableGitInfo = true
   home = ["HTML", "JSON", "RSS"]
 
 [frontmatter]
-  lastmod = [':git', ':fileModTime']
+  lastmod = ["lastmod", ":git"]
