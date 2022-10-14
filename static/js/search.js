@@ -8,7 +8,10 @@ async function getDocuments() {
     const response = await fetch('/index.json')
     const data = await response.json()
 
-    searchResults = data.map(d => ({ Description: d.Description, Title: d.Title}))
+    searchResults = data.map((d) => ({
+      Description: d.Description,
+      Title: d.Title,
+    }))
   } catch (e) {
     console.log(e)
   }
@@ -17,17 +20,17 @@ async function getDocuments() {
 getDocuments()
 
 async function search(value) {
-  searchResults?.forEach((result, i) => {
+  blogs.forEach((blog, i) => {
     const isVisible =
-      result.Title.toLowerCase().includes(value.trim()) ||
-      result.Description.toLowerCase().includes(value.trim())
-    blogs[i].classList.toggle('hidden', !isVisible)
+      searchResults[i]?.Title.toLowerCase().includes(value.trim()) ||
+      searchResults[i]?.Description.toLowerCase().includes(value.trim())
+
+    blog.classList.toggle('hidden', !isVisible)
   })
 }
 
 searchInput.addEventListener('input', (e) => {
-  const value = e.target.value.toLowerCase()
-  search(value)
+  search(e.target.value.toLowerCase())
 })
 
 document.addEventListener('keyup', (e) => {
