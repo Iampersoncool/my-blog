@@ -12,12 +12,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/index.css" />
-    <!-- {{ range os.ReadDir "/static/dist" }}
+    {{ range os.ReadDir "/static/dist" }}
     <script src="/dist/{{ .Name }}" defer></script>
-    {{ end }} -->
+    {{ end }}
 
     <!-- testing purposes -->
-    <script src="/js/search.js" defer type="module"></script>
+    <!-- <script src="/js/search.js" defer type="module"></script> -->
   </head>
   <body>
     <input type="search" placeholder="search(/)" class="searchInput p-1 m-2" />
