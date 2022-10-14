@@ -1,7 +1,21 @@
+import sort from './sort.js'
+
 const searchInput = document.querySelector('.searchInput')
 const blogs = document.querySelectorAll('.blog')
+const sortSelect = document.getElementById('sort')
 
 let searchResults
+
+getDocuments()
+
+let sortBy = localStorage.getItem('sort-by')
+if (sortBy != null) {
+  sortSelect.value = sortBy
+  getDocuments().then((searchResults) => {
+    const s = sort(searchResults, sortBy)
+    updateHTMLSortFunc(s)
+  })
+}
 
 async function getDocuments() {
   try {
@@ -11,13 +25,14 @@ async function getDocuments() {
     searchResults = data.map((d) => ({
       Description: d.Description,
       Title: d.Title,
+      Date: d.Date,
     }))
+
+    return searchResults
   } catch (e) {
     console.log(e)
   }
 }
-
-getDocuments()
 
 async function search(value) {
   blogs.forEach((blog, i) => {
@@ -32,6 +47,34 @@ async function search(value) {
 searchInput.addEventListener('input', (e) => {
   search(e.target.value.toLowerCase())
 })
+
+sortSelect.addEventListener('input', (e) => {
+  const value = e.target.value
+
+  if (searchResults) {
+    const s = sort(searchResults, value)
+    updateHTMLSortFunc(s)
+  }
+})
+
+function updateHTMLSortFunc(t) {
+  t.forEach((sort, i) => {
+    const title = blogs[i].querySelector('.title'),
+      date = blogs[i].querySelector('.date'),
+      description = blogs[i].querySelector('.description')
+
+    title.textContent = sort.Title
+    description.textContent = sort.Description
+    date.textContent = new Date(sort.Date).toLocaleTimeString('en-us', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: true,
+    })
+  })
+}
 
 document.addEventListener('keyup', (e) => {
   if (e.key === 'Escape') searchInput.blur()

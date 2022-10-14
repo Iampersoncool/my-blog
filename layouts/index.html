@@ -12,12 +12,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/css/index.css" />
-    {{ range os.ReadDir "/static/dist" }}
+    <!-- {{ range os.ReadDir "/static/dist" }}
     <script src="/dist/{{ .Name }}" defer></script>
-    {{ end }}
+    {{ end }} -->
+
+    <!-- testing purposes -->
+    <script src="/js/search.js" defer type="module"></script>
   </head>
   <body>
     <input type="search" placeholder="search(/)" class="searchInput p-1 m-2" />
+
+    <div class="m-2">
+      <label for="sort">Sort by</label>
+      <select id="sort">
+        <option value="newest">newest</option>
+        <option value="oldest">oldest</option>
+      </select>
+    </div>
 
     <div class="mx-auto blogs" style="width: 40rem">
       {{ range where .Paginator.Pages "Section" "blogs" }} {{ partial
