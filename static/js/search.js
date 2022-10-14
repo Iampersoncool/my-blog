@@ -22,6 +22,7 @@ async function getDocuments() {
     const response = await fetch('/index.json')
     const data = await response.json()
 
+<<<<<<< HEAD
     searchResults = data.map((d) => ({
       Description: d.Description,
       Title: d.Title,
@@ -29,23 +30,26 @@ async function getDocuments() {
     }))
 
     return searchResults
+=======
+    searchResults = data.map(d => ({ Description: d.Description, Title: d.Title}))
+>>>>>>> parent of 2ddc2d4 (stuff)
   } catch (e) {
     console.log(e)
   }
 }
 
 async function search(value) {
-  blogs.forEach((blog, i) => {
+  searchResults?.forEach((result, i) => {
     const isVisible =
-      searchResults[i]?.Title.toLowerCase().includes(value.trim()) ||
-      searchResults[i]?.Description.toLowerCase().includes(value.trim())
-
-    blog.classList.toggle('hidden', !isVisible)
+      result.Title.toLowerCase().includes(value.trim()) ||
+      result.Description.toLowerCase().includes(value.trim())
+    blogs[i].classList.toggle('hidden', !isVisible)
   })
 }
 
 searchInput.addEventListener('input', (e) => {
-  search(e.target.value.toLowerCase())
+  const value = e.target.value.toLowerCase()
+  search(value)
 })
 
 sortSelect.addEventListener('input', (e) => {

@@ -1,6 +1,6 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range where .Paginator.Pages "Section" "blogs" -}}
-    {{- $.Scratch.Add "index" (dict "Title" .Title "Description" .Description "Date" .Date) -}}
+    {{- $.Scratch.Add "index" (dict "Title" .Title "Description" .Description "Date") -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}
 

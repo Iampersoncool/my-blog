@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ .Title }}</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="/css/index.css" />
-    {{ range os.ReadDir "/static/dist" }}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/index.css">
+  {{ range os.ReadDir "/static/dist" }}
     <script src="/dist/{{ .Name }}" defer></script>
+<<<<<<< HEAD
     {{ end }}
 
     <!-- testing purposes -->
@@ -36,3 +32,18 @@
     </div>
   </body>
 </html>
+=======
+  {{ end }}
+</head>
+<body>
+  <input type="search" placeholder="search(/)" class="searchInput p-1 m-2">
+
+  <div class="mx-auto blogs" style="width: 40rem;">
+    {{ range where .Paginator.Pages "Section" "blogs" }}
+      {{ partial "showBlog.html" . }}
+    {{ end }}
+  </div>
+
+</body>
+</html>
+>>>>>>> parent of 2ddc2d4 (stuff)
